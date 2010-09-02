@@ -1,6 +1,4 @@
-if node[:environment][:name] == "CreationMix_Demo" then
-  require_recipe "demo_basic_auth"
-end
+require_recipe "basic_auth"
 
 #execute "testing" do
 #  command %Q{
