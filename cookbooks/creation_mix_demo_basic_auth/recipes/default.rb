@@ -7,7 +7,7 @@ remote_file "/etc/nginx/servers/CreationMix_Demo.conf" do
   owner "deploy"
   group "deploy"
   mode 0644
-  source "nginx_http_basic_auth.conf"
+  source "demo_nginx_http_basic_auth.conf"
   backup false
   action :create
 end
