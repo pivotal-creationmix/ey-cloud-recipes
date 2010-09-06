@@ -13,7 +13,7 @@ remote_file "/etc/logrotate.d/nginx" do
 end
 
 remote_file "/etc/logrotate.d/application-logs" do
-  source "application.logrotate"
+  source "application-logs.logrotate"
   owner "root"
   group "root"
   mode 0644
