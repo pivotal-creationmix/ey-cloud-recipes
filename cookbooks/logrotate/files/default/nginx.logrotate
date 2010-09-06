@@ -1,6 +1,7 @@
 /var/log/engineyard/nginx/*.log /var/log/engineyard/nginx/error_log {
-    rotate 30
-    size 100M
+    daily
+    rotate 7
+    dateext
     compress
     missingok
     notifempty

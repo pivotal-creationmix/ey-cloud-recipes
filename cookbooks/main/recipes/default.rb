@@ -2,6 +2,10 @@ if node[:environment][:name] == "CreationMix_Demo" then
   require_recipe "creation_mix_demo_basic_auth"
 end
 
+require_recipe "nginx_monit"
+require_recipe "logrotate"
+
+
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
@@ -56,8 +60,7 @@ end
 #uncomment to run the redis recipe
 #require_recipe "redis"
 
-#require_recipe "logrotate"
-#
+
 #uncomment to use the solr recipe
 #require_recipe "solr"
 
