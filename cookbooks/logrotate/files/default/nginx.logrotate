@@ -4,6 +4,7 @@
     maxage 7
     dateext
     compress
+    delaycompress
     missingok
     notifempty
     sharedscripts
