@@ -1,6 +1,7 @@
 /var/log/engineyard/apps/*/*.log {
     daily
     rotate 7
+    maxage 7
     dateext
     compress
 

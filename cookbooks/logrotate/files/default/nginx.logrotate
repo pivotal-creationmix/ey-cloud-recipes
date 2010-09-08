@@ -1,6 +1,7 @@
 /var/log/engineyard/nginx/*.log /var/log/engineyard/nginx/error_log /var/log/engineyard/nginx/access_log {
     daily
     rotate 7
+    maxage 7
     dateext
     compress
     missingok
