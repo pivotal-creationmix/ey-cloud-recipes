@@ -1,4 +1,4 @@
-/var/log/engineyard/nginx/*.log /var/log/engineyard/nginx/error_log {
+/var/log/engineyard/nginx/*.log /var/log/engineyard/nginx/error_log /var/log/engineyard/nginx/access_log {
     daily
     rotate 7
     dateext
@@ -7,9 +7,8 @@
     notifempty
     sharedscripts
     extension gz
-    
-      postrotate
-          [ ! -f /var/run/nginx.pid ] || kill -USR1 `cat /var/run/nginx.pid`
 
-      endscript
+    postrotate
+        [ ! -f /var/run/nginx.pid ] || kill -USR1 `cat /var/run/nginx.pid`
+    endscript
 }
