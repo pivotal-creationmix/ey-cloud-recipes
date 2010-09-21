@@ -5,6 +5,7 @@ end
 require_recipe "nginx_monit"
 require_recipe "logrotate"
 require_recipe "delayed_job"
+require_recipe "mysql2"
 
 
 #execute "testing" do
