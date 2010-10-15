@@ -11,6 +11,15 @@ remote_file "/etc/nginx/servers/CreationMix_Demo.conf" do
   action :create
 end
 
+remote_file "/etc/nginx/common/proxy-headers.conf" do
+  owner "deploy"
+  group "deploy"
+  mode 0644
+  source "proxy-headers.conf"
+  backup false
+  action :create
+end
+
 execute "restart nginx" do
   command "sudo /etc/init.d/nginx restart"
 end
