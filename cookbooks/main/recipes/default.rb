@@ -2,6 +2,10 @@ if node[:environment][:name] == "CreationMix_Demo" then
   require_recipe "creation_mix_demo_basic_auth"
 end
 
+if node[:environment][:name] == "creationmix_production" then
+  require_recipe "redirect_www_to_top_level"
+end
+
 require_recipe "nginx_monit"
 require_recipe "logrotate"
 require_recipe "delayed_job"
