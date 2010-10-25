@@ -1,0 +1,5 @@
+server {
+  listen <%= @http_bind_port %>;
+  <%= "server_name www.#{@server_name};" %>
+  <%= "rewrite ^ http://#{@server_name}$uri permanent;" %>
+}
